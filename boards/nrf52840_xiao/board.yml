@@ -1,0 +1,8 @@
+board:
+  name: nrf52840_xiao
+  full_name: NRF52840 XIAO BLE
+  vendor: payatek
+  socs:
+  - name: nrf52840
+    variants:
+    - name: 'sense'
