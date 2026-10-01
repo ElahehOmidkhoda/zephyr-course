@@ -1,0 +1,6 @@
+board:
+  name: nrf52840_scratch
+  full_name: NRF52840 XIAO BLE SCRATCH
+  vendor: payatek
+  socs:
+  - name: nrf52840

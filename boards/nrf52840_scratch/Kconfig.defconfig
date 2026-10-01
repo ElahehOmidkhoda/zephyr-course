@@ -1,0 +1,5 @@
+if BOARD_NRF52840_SCRATCH
+
+source "boards/common/usb/Kconfig.cdc_acm_serial.defconfig"
+
+endif # BOARD_NRF52840_SCRATCH
