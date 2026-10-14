@@ -1,5 +1,7 @@
 / {
-	aliases {
-		app-led = &led1;
-	};
+    our_driver0: our_driver {
+        compatible = "our,driver";
+        led-gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
+        status = "okay";
+    };
 };
