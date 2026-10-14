@@ -2,6 +2,7 @@
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/logging/log.h>
+#include "our_driver.h"
 
 LOG_MODULE_REGISTER(main_app, LOG_LEVEL_INF);
 
@@ -16,6 +17,9 @@ int main(void)
         LOG_ERR("Driver not ready");
         return 0;
     }
+
+    our_driver_set_delay(driver, 500);
+    LOG_INF("Custom extension API called successfully");
 
     struct sensor_value val = {};
 
