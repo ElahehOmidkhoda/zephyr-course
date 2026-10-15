@@ -21,6 +21,8 @@ static int channel_get_my_imp(const struct device *dev,
 				    enum sensor_channel chan,
 				    struct sensor_value *val) {
                         int ret = gpio_pin_set_dt(&led, 0);
+                        val->val1 = 0;
+                        val->val2 = 0;
                         if (ret < 0) {
                             LOG_ERR("Failed to set LED pin: %d", ret);
                             return ret;

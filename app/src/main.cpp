@@ -2,15 +2,15 @@
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/logging/log.h>
-#include "our_driver.h"
+//#include "our_driver.h"
 
-LOG_MODULE_REGISTER(main_app, LOG_LEVEL_INF);
+//LOG_MODULE_REGISTER(main_app, LOG_LEVEL_INF);
 
-#define MY_SENSOR_NODE DT_NODELABEL(our_driver0)
+//#define MY_SENSOR_NODE DT_NODELABEL(our_driver0)
 
 int main(void)
 {
-    const struct device *driver =
+   /*  const struct device *driver =
         DEVICE_DT_GET(MY_SENSOR_NODE);
 
     if (!device_is_ready(driver)) {
@@ -21,10 +21,10 @@ int main(void)
     our_driver_set_delay(driver, 500);
     LOG_INF("Custom extension API called successfully");
 
-    struct sensor_value val = {};
+    struct sensor_value val = {}; */
 
     while (true) {
-
+/* 
         // Turn LED ON
         int ret = sensor_sample_fetch(driver);
 
@@ -46,6 +46,9 @@ int main(void)
         }
 
         k_msleep(1000);
+        
+ */
+    k_sleep(K_SECONDS(1));
     }
 
     return 0;
